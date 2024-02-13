@@ -13,21 +13,85 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
       rel="stylesheet"
     />
+    <!-- favicon link -->
+    <link
+      rel="shortcut icon"
+      href="./assets/images/shapes.png"
+      type="image/x-icon"
+    />
   </head>
   <body class="w-full h-auto font-inter">
-    <section class="flex items-start gap-5 w-[95%] mx-auto">
+    <!-- header section -->
+    <div class="navbar w-[90%] mx-auto my-5">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
+            </svg>
+          </div>
+          <ul
+            tabindex="0"
+            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+          >
+            <li><a>Home</a></li>
+            <li>
+              <a>Services</a>
+            </li>
+            <li><a>Products</a></li>
+            <li><a>Tools</a></li>
+          </ul>
+        </div>
+        <div class="flex items-center gap-2">
+          <img
+            src="./assets/images/shapes.png"
+            alt="logo.png"
+            class="w-[30px] h-[30px]"
+          />
+          <a class="text-2xl font-bold">Geometry Genius</a>
+        </div>
+      </div>
+      <div class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal px-1">
+          <li><a>Home</a></li>
+          <li>
+            <a>Services</a>
+          </li>
+          <li><a>Products</a></li>
+          <li><a>Tools</a></li>
+        </ul>
+      </div>
+      <div class="navbar-end">
+        <a class="btn">More tools</a>
+      </div>
+    </div>
+    <!-- cards -->
+    <section
+      class="flex lg:flex-row flex-col items-start gap-5 w-[95%] mx-auto"
+    >
       <section
-        class="w-[75%] grid grid-cols-3 grid-rows-2 items-center gap-5 my-10"
+        class="lg:w-[75%] w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-3 lg:grid-rows-2 grid-rows-1 items-center gap-5 my-10"
       >
         <!-- triangle card -->
         <div
-          class="card w-full h-full border border-[ #1111111a] rounded-md flex flex-col items-center gap-8 px-10 py-8"
+          class="card w-full h-full border border-[ #1111111a] rounded-md flex flex-col items-center gap-8 px-10 py-8 hover:bg-gray-50 hover:border-gray-100"
         >
           <figure>
             <img
               src="./assets/images/triangle.png"
               alt="triangle.png"
-              class="h-[200px]"
+              class="h-[200px] hover:scale-[.85] hover:duration-500"
             />
           </figure>
           <div class="w-full *:mb-4 *:text-center">
@@ -61,13 +125,13 @@
         </div>
         <!-- rectangle card -->
         <div
-          class="card w-full h-full border border-[ #1111111a] rounded-md flex flex-col items-center gap-8 px-10 py-8"
+          class="card w-full h-full border border-[ #1111111a] rounded-md flex flex-col items-center gap-8 px-10 py-8 hover:bg-gray-50 hover:border-gray-100"
         >
           <figure>
             <img
               src="./assets/images/rectangle.png"
               alt="rectangle.png"
-              class="h-[200px]"
+              class="h-[200px] hover:scale-[.85] hover:duration-500"
             />
           </figure>
           <div class="w-full *:mb-4 *:text-center">
@@ -101,13 +165,13 @@
         </div>
         <!-- Parallelogram card -->
         <div
-          class="card w-full h-full border border-[ #1111111a] rounded-md flex flex-col items-center gap-8 px-10 py-8"
+          class="card w-full h-full border border-[ #1111111a] rounded-md flex flex-col items-center gap-8 px-10 py-8 hover:bg-gray-50 hover:border-gray-100"
         >
           <figure>
             <img
               src="./assets/images/parallelogram.png"
               alt="Parallelogram.png"
-              class="h-[200px]"
+              class="h-[200px] hover:scale-[.85] hover:duration-500"
             />
           </figure>
           <div class="w-full *:mb-4 *:text-center">
@@ -141,111 +205,122 @@
         </div>
         <!-- Rhombus card -->
         <div
-          class="card w-full h-full border border-[ #1111111a] rounded-md flex flex-col items-center gap-8 px-10 py-8"
+          class="card w-full h-full border border-[ #1111111a] rounded-md flex flex-col items-center gap-8 px-10 py-8 hover:bg-gray-50 hover:border-gray-100"
         >
           <figure>
             <img
-              src="./assets/images/parallelogram.png"
-              alt="Parallelogram.png"
-              class="h-[200px]"
+              src="./assets/images/rhombus.png"
+              alt="rhombus.png"
+              class="h-[200px] hover:scale-[.85] hover:duration-500"
             />
           </figure>
           <div class="w-full *:mb-4 *:text-center">
-            <h1 class="text-2xl font-bold">Parallelogram</h1>
-            <p class="text-gray-600 font-medium">Area (A) = b * h</p>
+            <h1 class="text-2xl font-bold">Rhombus</h1>
+            <p class="text-gray-600 font-medium">
+              Area (A) = 0.5 * d<sub>1</sub> * d<sub>2</sub>
+            </p>
             <div class="flex items-center gap-5">
               <div class="flex items-center gap-1">
                 <input
                   type="text"
-                  placeholder="b"
+                  placeholder="d1"
                   class="w-full bg-gray-100 px-4 py-2 rounded-md focus:outline-none"
+                  id="rhombus-d1"
                 /><span>cm</span>
               </div>
               <div class="flex items-center gap-1">
                 <input
                   type="text"
-                  placeholder="h"
+                  placeholder="d2"
                   class="w-full bg-gray-100 px-4 py-2 rounded-md focus:outline-none"
+                  id="rhombus-d2"
                 /><span>cm</span>
               </div>
             </div>
           </div>
           <button
             class="text-lg font-bold text-white bg-blue-600 rounded-xl w-full py-3 hover:shadow-xl"
+            id="btn-rhombus"
           >
             Calculate
           </button>
         </div>
-        <!-- Parallelogram card -->
+        <!-- Pentagon card -->
         <div
-          class="card w-full h-full border border-[ #1111111a] rounded-md flex flex-col items-center gap-8 px-10 py-8"
+          class="card w-full h-full border border-[ #1111111a] rounded-md flex flex-col items-center gap-8 px-10 py-8 hover:bg-gray-50 hover:border-gray-100"
         >
           <figure>
             <img
-              src="./assets/images/parallelogram.png"
+              src="./assets/images/pentagon.png"
               alt="Parallelogram.png"
-              class="h-[200px]"
+              class="h-[200px] hover:scale-[.85] hover:duration-500"
             />
           </figure>
           <div class="w-full *:mb-4 *:text-center">
             <h1 class="text-2xl font-bold">Parallelogram</h1>
-            <p class="text-gray-600 font-medium">Area (A) = b * h</p>
+            <p class="text-gray-600 font-medium">Area (A) = 0.5 * p * b</p>
             <div class="flex items-center gap-5">
               <div class="flex items-center gap-1">
                 <input
                   type="text"
-                  placeholder="b"
+                  placeholder="p"
                   class="w-full bg-gray-100 px-4 py-2 rounded-md focus:outline-none"
+                  id="pentagon-p"
                 /><span>cm</span>
               </div>
               <div class="flex items-center gap-1">
                 <input
                   type="text"
-                  placeholder="h"
+                  placeholder="b"
                   class="w-full bg-gray-100 px-4 py-2 rounded-md focus:outline-none"
+                  id="pentagon-b"
                 /><span>cm</span>
               </div>
             </div>
           </div>
           <button
             class="text-lg font-bold text-white bg-blue-600 rounded-xl w-full py-3 hover:shadow-xl"
+            id="btn-pentagon"
           >
             Calculate
           </button>
         </div>
-        <!-- Parallelogram card -->
+        <!-- ellipse card -->
         <div
-          class="card w-full h-full border border-[ #1111111a] rounded-md flex flex-col items-center gap-8 px-10 py-8"
+          class="card w-full h-full border border-[ #1111111a] rounded-md flex flex-col items-center gap-8 px-10 py-8 hover:bg-gray-50 hover:border-gray-100"
         >
           <figure>
             <img
-              src="./assets/images/parallelogram.png"
-              alt="Parallelogram.png"
-              class="h-[200px]"
+              src="./assets/images/ellipse.png"
+              alt="ellipse.png"
+              class="h-[200px] hover:scale-[.85] hover:duration-500"
             />
           </figure>
           <div class="w-full *:mb-4 *:text-center">
-            <h1 class="text-2xl font-bold">Parallelogram</h1>
-            <p class="text-gray-600 font-medium">Area (A) = b * h</p>
+            <h1 class="text-2xl font-bold">Ellipse</h1>
+            <p class="text-gray-600 font-medium">Area (A) = πab</p>
             <div class="flex items-center gap-5">
               <div class="flex items-center gap-1">
                 <input
                   type="text"
-                  placeholder="b"
+                  placeholder="a"
                   class="w-full bg-gray-100 px-4 py-2 rounded-md focus:outline-none"
+                  id="ellipse-a"
                 /><span>cm</span>
               </div>
               <div class="flex items-center gap-1">
                 <input
                   type="text"
-                  placeholder="h"
+                  placeholder="b"
                   class="w-full bg-gray-100 px-4 py-2 rounded-md focus:outline-none"
+                  id="ellipse-b"
                 /><span>cm</span>
               </div>
             </div>
           </div>
           <button
             class="text-lg font-bold text-white bg-blue-600 rounded-xl w-full py-3 hover:shadow-xl"
+            id="btn-ellipse"
           >
             Calculate
           </button>
@@ -253,7 +328,7 @@
       </section>
       <!-- result section -->
       <section
-        class="card w-[25%] border border-[ #1111111a] rounded-md h-[500px] my-10 p-5 *:mb-5"
+        class="card lg:w-[25%] w-[90%] mx-auto border border-[ #1111111a] rounded-md h-[500px] my-10 p-5 *:mb-5"
         id="result-sec"
       >
         <h1 class="text-center font-bold text-xl">Area Calculation</h1>
@@ -261,37 +336,52 @@
           id="result-one"
           class="text-xl font-medium text-gray-600 text-center hidden"
         >
-          Triangle Value: <span id="result-1"></span
+          Triangle Value: <span id="result-1" class="text-xl"></span
           ><span class="text-sm">cm</span><sup>2</sup>
         </p>
         <p
           id="result-two"
           class="text-xl font-medium text-gray-600 text-center hidden"
         >
-          Rectangle Value: <span id="result-2" class="text-sm"></span
+          Rectangle Value: <span id="result-2" class="text-xl"></span
           ><span class="text-sm">cm</span><sup>2</sup>
         </p>
         <p
           id="result-three"
           class="text-xl font-medium text-gray-600 text-center hidden"
         >
-          Parallelogram Value: <span id="result-3" class="text-sm"></span
+          Parallelogram Value: <span id="result-3" class="text-xl"></span
           ><span class="text-sm">cm</span><sup>2</sup>
         </p>
         <p
-          id="result-4"
-          class="text-xl font-medium text-gray-600 text-center"
-        ></p>
+          id="result-four"
+          class="text-xl font-medium text-gray-600 text-center hidden"
+        >
+          Rhombus Value: <span id="result-4" class="text-xl"></span
+          ><span class="text-sm">cm</span><sup>2</sup>
+        </p>
         <p
-          id="result-5"
-          class="text-xl font-medium text-gray-600 text-center"
-        ></p>
+          id="result-five"
+          class="text-xl font-medium text-gray-600 text-center hidden"
+        >
+          Pentagon Value: <span id="result-5" class="text-xl"></span
+          ><span class="text-sm">cm</span><sup>2</sup>
+        </p>
         <p
-          id="result-6"
-          class="text-xl font-medium text-gray-600 text-center"
-        ></p>
+          id="result-six"
+          class="text-xl font-medium text-gray-600 text-center hidden"
+        >
+          Ellipse Value: <span id="result-6" class="text-xl"></span
+          ><span class="text-sm">cm</span><sup>2</sup>
+        </p>
       </section>
     </section>
+    <!-- footer sec -->
+    <footer class="w-[90%] mx-auto mt-10 mb-2">
+      <p class="text-center font-semibold text-gray-600 tracking-wider">
+        All Rights Reserved by Shejan Mahamud with JS DOM
+      </p>
+    </footer>
     <!-- js file -->
     <script src="./js/script.js"></script>
   </body>
