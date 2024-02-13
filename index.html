@@ -40,7 +40,7 @@
                   placeholder="b"
                   class="w-full bg-gray-100 px-4 py-2 rounded-md focus:outline-none"
                   id="triangle-b"
-                /><span>cm</span>
+                /><span class="text-sm">cm</span>
               </div>
               <div class="flex items-center gap-1">
                 <input
@@ -48,7 +48,7 @@
                   placeholder="h"
                   class="w-full bg-gray-100 px-4 py-2 rounded-md focus:outline-none"
                   id="triangle-h"
-                /><span>cm</span>
+                /><span class="text-sm">cm</span>
               </div>
             </div>
           </div>
@@ -79,6 +79,7 @@
                   type="text"
                   placeholder="w"
                   class="w-full bg-gray-100 px-4 py-2 rounded-md focus:outline-none"
+                  id="rectangle-w"
                 /><span>cm</span>
               </div>
               <div class="flex items-center gap-1">
@@ -86,12 +87,14 @@
                   type="text"
                   placeholder="l"
                   class="w-full bg-gray-100 px-4 py-2 rounded-md focus:outline-none"
+                  id="rectangle-l"
                 /><span>cm</span>
               </div>
             </div>
           </div>
           <button
             class="text-lg font-bold text-white bg-blue-600 rounded-xl w-full py-3 hover:shadow-xl"
+            id="btn-rectangle"
           >
             Calculate
           </button>
@@ -116,6 +119,7 @@
                   type="text"
                   placeholder="b"
                   class="w-full bg-gray-100 px-4 py-2 rounded-md focus:outline-none"
+                  id="parallelogram-b"
                 /><span>cm</span>
               </div>
               <div class="flex items-center gap-1">
@@ -123,17 +127,19 @@
                   type="text"
                   placeholder="h"
                   class="w-full bg-gray-100 px-4 py-2 rounded-md focus:outline-none"
+                  id="parallelogram-h"
                 /><span>cm</span>
               </div>
             </div>
           </div>
           <button
             class="text-lg font-bold text-white bg-blue-600 rounded-xl w-full py-3 hover:shadow-xl"
+            id="btn-parallelogram"
           >
             Calculate
           </button>
         </div>
-        <!-- Parallelogram card -->
+        <!-- Rhombus card -->
         <div
           class="card w-full h-full border border-[ #1111111a] rounded-md flex flex-col items-center gap-8 px-10 py-8"
         >
@@ -248,9 +254,42 @@
       <!-- result section -->
       <section
         class="card w-[25%] border border-[ #1111111a] rounded-md h-[500px] my-10 p-5 *:mb-5"
+        id="result-sec"
       >
         <h1 class="text-center font-bold text-xl">Area Calculation</h1>
-        <p id="result-1"></p>
+        <p
+          id="result-one"
+          class="text-xl font-medium text-gray-600 text-center hidden"
+        >
+          Triangle Value: <span id="result-1"></span
+          ><span class="text-sm">cm</span><sup>2</sup>
+        </p>
+        <p
+          id="result-two"
+          class="text-xl font-medium text-gray-600 text-center hidden"
+        >
+          Rectangle Value: <span id="result-2" class="text-sm"></span
+          ><span class="text-sm">cm</span><sup>2</sup>
+        </p>
+        <p
+          id="result-three"
+          class="text-xl font-medium text-gray-600 text-center hidden"
+        >
+          Parallelogram Value: <span id="result-3" class="text-sm"></span
+          ><span class="text-sm">cm</span><sup>2</sup>
+        </p>
+        <p
+          id="result-4"
+          class="text-xl font-medium text-gray-600 text-center"
+        ></p>
+        <p
+          id="result-5"
+          class="text-xl font-medium text-gray-600 text-center"
+        ></p>
+        <p
+          id="result-6"
+          class="text-xl font-medium text-gray-600 text-center"
+        ></p>
       </section>
     </section>
     <!-- js file -->
